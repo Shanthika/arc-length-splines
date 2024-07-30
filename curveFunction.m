@@ -32,6 +32,15 @@ function [curveX, curveY] = curveFunction(points, totalArcLength)
     scale = totalArcLength / cumulativeArcLength(end);
     curveX = curveX*scale;
     curveY = curveY*scale;
-plot(curveX, curveY);
+
+    % Plot the curve
+    figure;
+    plot(curveX, curveY);
+    hold on;
+    title('Curve Interpolation using Arc-Length and Points');
+    xlabel('X');
+    ylabel('Y');
+    grid on;
+    hold off;
 end
 
